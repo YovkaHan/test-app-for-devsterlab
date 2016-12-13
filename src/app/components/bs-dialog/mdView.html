@@ -1,0 +1,151 @@
+ <!-- Modal content-->
+        <div class="row bs-dialog-content">
+            <h3 class="text-center">Create new User</h3>
+            <span style="float: right; margin-right: 50px">required fields <span class="required-i">*</span></span>
+            <div class="col-xs-10 col-xs-offset-1" style="padding: 10px; margin-top: 10px;">
+                <form class="form-horizontal">
+                    <div class="form-inputs">
+                        <div class="form-group">
+                            <label class="control-label col-xs-2" for="n-name">Name:<span class="required-i">*</span></label>
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" id="n-name" ng-change="$ctrl.checkingInput()" ng-model="$ctrl.userInput.name"  placeholder="Enter name">
+                            </div>
+                            <div class="form-group-log col-xs-3">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2" for="n-username">Username:<span class="required-i">*</span></label>
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" id="n-username" ng-model="$ctrl.userInput.username"  ng-change="$ctrl.checkingInput()" placeholder="Enter username">
+                            </div>
+                            <div class="form-group-log col-xs-3">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2" for="n-email">Email:<span class="required-i">*</span></label>
+                            <div class="col-xs-7">
+                                <input type="email" class="form-control" id="n-email" ng-model="$ctrl.userInput.email" ng-change="$ctrl.checkingInput()"  placeholder="Enter email">
+                            </div>
+                            <div class="form-group-log col-xs-3">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bs-dialog-address">
+                            <span class="adress-label">Address</span>
+                            <div class="form-group">
+                                <label class="control-label col-xs-2" for="n-street">Street:</label>
+                                <div class="col-xs-7">
+                                    <input type="text" class="form-control" id="n-street" ng-model="$ctrl.userInput.address.street" ng-change="$ctrl.checkingInput()" placeholder="">
+                                </div>
+                                <div class="form-group-log col-xs-3">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-2" for="n-suite">Suite:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="n-suite" ng-model="$ctrl.userInput.address.suite" ng-change="$ctrl.checkingInput()" placeholder="">
+                                </div>
+                                <div class="form-group-log col-xs-3">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-2" for="n-street">City:</label>
+                                <div class="col-xs-7">
+                                    <input type="text" class="form-control" id="n-city" ng-model="$ctrl.userInput.address.city" ng-change="$ctrl.checkingInput()" placeholder="">
+                                </div>
+                                <div class="form-group-log col-xs-3">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-2" for="n-suite">Zipcode:</label>
+                                <div class="col-xs-7">
+                                    <input type="text" class="form-control" id="n-zipcode" ng-model="$ctrl.userInput.address.zipcode" ng-change="$ctrl.checkingInput()" number-input-plus >
+                                </div>
+                                <div class="form-group-log col-xs-3">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bs-dialog-address-geo">
+                                <span class="coords-label" >Coords</span>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-4" for="n-latitude">Latitude:</label>
+                                    <div class="col-xs-6">
+                                        <input type="text" class="form-control" id="n-latitude" ng-model="$ctrl.userInput.address.geo.lat" ng-change="$ctrl.checkingInput()" number-input-plus >
+                                    </div>
+                                    <div class="form-group-log col-xs-2">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-4" for="n-longitude">Longitude:</label>
+                                    <div class="col-xs-6">
+                                        <input type="text" class="form-control" id="n-longitude" ng-model="$ctrl.userInput.address.geo.lng" ng-change="$ctrl.checkingInput()" number-input-plus >
+                                    </div>
+                                    <div class="form-group-log col-xs-2">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Phone:</label>
+                            <div class="phone-form col-xs-7">
+                                <span>(</span>
+                                <input type="text" class="phone-form-input" id="n-phone1" ng-model="$ctrl.userInput.phone.phone1" ng-change="$ctrl.checkingInput()" ng-trim="false" number-input maxlength="3" size="1">
+                                <span>)</span>
+                                <input type="text" class="phone-form-input" id="n-phone2" ng-model="$ctrl.userInput.phone.phone2" ng-change="$ctrl.checkingInput()" ng-trim="false" number-input maxlength="3" size="1">
+                                <span>-</span>
+                                <input type="text" class="phone-form-input" id="n-phone3" ng-model="$ctrl.userInput.phone.phone3" ng-change="$ctrl.checkingInput()" ng-trim="false" number-input maxlength="4" size="1">
+                            </div>
+                            <div class="form-group-log col-xs-3">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="form-group website-form">
+                            <label >Website (|website_name|.|domain|):</label>
+                            <input type="text" class="form-control" id="n-website1" ng-model="$ctrl.userInput.website.website1" ng-change="$ctrl.checkingInput()" placeholder="">
+                            <span><b>.</b></span>
+                            <input type="text" class="form-control" id="n-website2" ng-model="$ctrl.userInput.website.website2" ng-change="$ctrl.checkingInput()" placeholder="">
+                        </div>
+                        <div class="bs-dialog-company">
+                            <span class="company-label">Company</span>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3" for="n-companyName">Name:<span class="required-i">*</span></label>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" id="n-companyName" ng-model="$ctrl.userInput.company.name" ng-change="$ctrl.checkingInput()" placeholder="Enter company name">
+                                </div>
+                                <div class="form-group-log col-xs-3">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3" for="n-companyCatchPhrase">Catch Phrase:</span></label>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" id="n-companyCatchPhrase" ng-model="$ctrl.userInput.company.catchPhrase" ng-change="$ctrl.checkingInput()" placeholder="">
+                                </div>
+                                <div class="form-group-log col-xs-3">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-3" for="n-companyBs">Bs:</span></label>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" id="n-companyBs" ng-model="$ctrl.userInput.company.bs" ng-change="$ctrl.checkingInput()" placeholder="">
+                                </div>
+                                <div class="form-group-log col-xs-3">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <button class="btn btn-lg btn-primary" ng-class="{disabled : $ctrl.disabled}" ng-click="$ctrl.sendingForm()" id="bsFormSubmit">Submit</button>
+                <!--<button class="btn btn-lg btn-primary" ng-click="$ctrl.saveTestUnique()">Save Unique</button>
+                <button class="btn btn-lg btn-primary" ng-click="$ctrl.saveTestNonUnique()">Save NonUnique</button>-->
+                </form>
+            </div>
+        </div>

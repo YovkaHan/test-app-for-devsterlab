@@ -1,0 +1,37 @@
+<md-dialog aria-label="Sample Dialog" ng-show="ctrl.user">
+    <md-dialog-content class="user-info-dialog">
+        <span class="info-geo-cords">Latitude: {{ctrl.position.latitude}}</span>
+        <span class="info-geo-cords">Longitude: {{ctrl.position.longitude}}</span>
+        <h4 class="text-center">User information</h4>
+        <div class="user-info-dialog-content">
+            <p><span class="info-label">Id : </span><span class="info-data">{{ctrl.user.id}}</span></p>
+            <p><span class="info-label">Name : </span><span class="info-data">{{ctrl.user.name}}</span></p>
+            <p><span class="info-label">Username : </span><span class="info-data">{{ctrl.user.username}}</span></p>
+            <p><span class="info-label">Email : </span><span class="info-data">{{ctrl.user.email}}</span></p>
+            <div class="user-info-dialog-content">
+                <h4 class="text-center">Adress</h4>
+                <p><span class="info-label">&nbsp;Street : </span><span class="info-data">{{ctrl.user.address.street}}</span></p>
+                <p><span class="info-label">&nbsp;Suite : </span><span class="info-data">{{ctrl.user.address.suite}}</span></p>
+                <p><span class="info-label">&nbsp;City : </span><span class="info-data">{{ctrl.user.address.city}}</span></p>
+                <p><span class="info-label">&nbsp;Zipcode : </span><span class="info-data">{{ctrl.user.address.zipcode}}</span></p>
+                <p><span class="info-label">&nbsp;Distance to : </span><span class="info-data">{{ctrl.distance}}</span></p>
+            </div>
+            <p style="padding-top: 5px"><span class="info-label">Phone : </span><span class="info-data">{{ctrl.user.phone}}</span></p>
+            <p><span class="info-label">Website : </span><span class="info-data">{{ctrl.user.website}}</span></p>
+            <div class="user-info-dialog-content">
+                <h4 class="text-center">Company</h4>
+                <p><span class="info-label">&nbsp;Name : </span><span class="info-data">{{ctrl.user.company.name}}</span></p>
+                <p><span class="info-label">&nbsp;Catch phrase : </span><span class="info-data">{{ctrl.user.company.catchPhrase}}</span></p>
+                <p><span class="info-label">&nbsp;Bs : </span><span class="info-data">{{ctrl.user.company.bs}}</span></p>
+             </div>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="ctrl.closeDialog()" class="md-primary">
+            Close Dialog
+        </md-button>
+        <md-button ng-click="ctrl.getPosition()" class="md-primary">
+            Your geoposition
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>

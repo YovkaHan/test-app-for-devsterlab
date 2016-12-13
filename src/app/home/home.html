@@ -1,0 +1,48 @@
+<div class="row main-class">
+  <section class="col-lg-4 col-md-4 col-sm-4 col-xs-8 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 input-form">
+    <h4 class="text-center">Search by</h4>
+    <div class="inputs">
+      <div class="form-group">
+        <label for="i-name">Name:</label>
+        <input type="text" class="form-control" id="i-name" placeholder="Enter name" ng-model="$ctrl.formData.name">
+      </div>
+      <div class="form-group">
+        <label for="i-username">Username:</label>
+        <input type="text" class="form-control" id="i-username" placeholder="Enter username" ng-model="$ctrl.formData.username">
+      </div>
+      <div class="form-group">
+        <label for="i-name">Email:</label>
+        <input type="text" class="form-control" id="i-email" placeholder="Enter email" ng-model="$ctrl.formData.email">
+      </div>
+    </div>
+    <bs-dialog ></bs-dialog>
+  </section>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-1 output">
+    <h4 class="text-center">Result</h4>
+    <p>
+      Sort by:
+      <select ng-model="$ctrl.orderProp">
+        <option value="username">Username</option>
+        <option value="email">Email</option>
+        <option value="address.street">Street</option>
+        <option value="company.name">Company</option>
+      </select>
+      <select ng-model="$ctrl.reverse">
+        <option value="false">&#8595;</option>
+        <option value="true">&#8593;</option>
+      </select>
+    </p>
+    <div class="list-of-users">
+      <ul class="u-list">
+        <li ng-repeat="user in $ctrl.users | filter:$ctrl.formData:strict |orderBy:$ctrl.orderProp:($ctrl.reverse=='true'?true:false)">
+          <u-dialog user="user" class="full-info-btn"></u-dialog>
+          <div class="element-in-list">
+            <span><b>Name</b>: {{user.name}}</span>
+            <span><b>Username</b>: {{user.username}}</span>
+            <span><b>Email</b>: {{user.email}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

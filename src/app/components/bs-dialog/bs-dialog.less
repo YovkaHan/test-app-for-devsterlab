@@ -1,0 +1,144 @@
+.bs-dialog-content {
+
+  .form-inputs{
+    margin-bottom: 15px;
+
+    label{
+      margin-bottom: 1px !important;
+      padding-right: 0px;
+    }
+
+    .form-group {
+
+      .form-group-inner {
+
+        input {
+          display: inline-block;
+        }
+
+        button {
+          margin-left: 20px;
+        }
+
+        button.unique {
+          color: #50e41e;
+        }
+
+        button.non-unique {
+          color: red;
+        }
+      }
+
+      .form-control {
+        height: 26px !important;
+        width: 95%;
+      }
+    }
+
+    .bs-dialog-address {
+      border-left: 2px solid rgba(0, 18, 255, 0.5);
+      border-radius: 15px;
+
+      .adress-label {
+        padding-left: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: underline;
+      }
+      padding-top: 10px;
+
+      .form-group {
+        margin-bottom: 10px;
+        margin-left: 40px;
+      }
+
+      .bs-dialog-address-geo {
+        border-left: 2px solid rgba(0, 18, 255, 0.5);
+        border-radius: 15px;
+        padding-bottom: 0px;
+        margin-bottom: 20px;
+        width: 98%;
+        margin-left: 1%;
+
+        .coords-label {
+          padding-left: 40px;
+          font-weight: 600;
+          font-size: 15px;
+          text-decoration: underline;
+        }
+
+        .form-group {
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+
+    .bs-dialog-company {
+      border-left: 2px solid rgba(0, 18, 255, 0.5);
+      border-radius: 15px;
+
+      .company-label {
+        padding-left: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: underline;
+      }
+      padding-top: 10px;
+
+      .form-group {
+        margin-bottom: 10px;
+        margin-left: 40px;
+      }
+
+    }
+    .phone-form {
+
+      .phone-form-input {
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+        &, &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+          -webkit-appearance: none;
+          margin: 0;
+          -moz-appearance: textfield;
+        }
+        &:focus {
+          border-color: #66afe9;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+        }
+      }
+
+      #n-phone1, #n-phone2 {
+        padding-left: 10px;
+      }
+      #n-phone3 {
+        padding-left: 5px;
+      }
+    }
+
+    .website-form {
+
+      label {
+        display: block;
+      }
+      input {
+        display: inline;
+        width: 35% !important;
+      }
+    }
+  }
+}
+
+.required-i {
+  color: red;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.form-horizontal .control-label{
+  padding-top: 4px !important;
+  padding-bottom: 5px !important;
+}
