@@ -1,5 +1,5 @@
 {
-  "name": "Devster Lab Test",
+  "name": "Devster_Lab_Test",
   "version": "1.0.0",
   "description": "Devster Lab Test using seed from Thinkster",
   "author": "Yovka I.V.",
@@ -13,7 +13,7 @@
     "angular-messages": "^1.5.8",
     "angular-mocks": "1.5.8",
     "angular-route": "1.5.8",
-    "angular-sanitize": "^1.5.8",
+    "angular-sanitize": "1.5.8",
     "angular-ui-bootstrap": "^1.1.2",
     "angular-ui-router": "^1.0.0-beta.2",
     "babel-preset-es2015": "^6.3.13",
